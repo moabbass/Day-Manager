@@ -1,0 +1,33 @@
+﻿<Application x:Class="Day_Manager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Day_Manager"
+             xmlns:viewModel="clr-namespace:Day_Manager.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Day_Manager.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DescriptionTextBoxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewModel:ListViewModel}" >
+                <view:ListView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AddTaskViewModel}" >
+                <view:AddTasksView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:CalenderViewModel}" >
+                <view:CalenderView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+
+        
+    </Application.Resources>
+</Application>

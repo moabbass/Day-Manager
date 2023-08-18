@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Day_Manager.MVVM.View.AddTaskView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Day_Manager.MVVM.View"
+             xmlns:viewModel="clr-namespace:Day_Manager.MVVM.ViewModel"
+               >
+    <!--d:DesignHeight="350" d:DesignWidth="600"-->
+    <UserControl.DataContext>
+        <viewModel:AddTaskViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Margin="1"         
+         BorderThickness="0"
+         Background="Transparent"
+         VerticalAlignment="Center"
+         Padding="5"
+         FontSize="17"
+         Foreground="#CFCFCF"
+         Content="Description"/>
+
+        <Label Margin="1"         
+         BorderThickness="0"
+         Background="Transparent"
+         VerticalAlignment="Center"
+         Padding="5"
+         FontSize="17"
+         Foreground="#CFCFCF"
+         Content="Task Type" Grid.Row="1" Grid.Column="0"/>
+
+        <Label Margin="1"         
+         BorderThickness="0"
+         Background="Transparent"
+         VerticalAlignment="Center"
+         Padding="5"
+         FontSize="17"
+         Foreground="#CFCFCF"
+         Content="Date" Grid.Row="2" Grid.Column="0"/>
+
+        <TextBox  Width="250" Text="Description"
+                       Height="40"
+                       VerticalContentAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="5"
+                       Grid.Column="1"
+                       Style="{StaticResource ModernTextBox}"/>
+
+
+        <Button Content="Add"                             
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource ButtonTheme}" Grid.Column="1" Grid.Row="3" Margin="402,16,10,15" />
+
+
+
+
+
+    </Grid>
+</UserControl>
